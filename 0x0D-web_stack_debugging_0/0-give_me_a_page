@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
+<<<<<<< HEAD
 # Start Apache so as to return a
 # page conatining Hello Holberton
 echo "ServerName localhost" >> /etc/apache2.conf 
+=======
+#Start Apache so as to return a
+#Page conatining Hello Holberton
+>>>>>>> 70e72c7aa9611cf905e1430c96943605b8f2ca6b
 sudo service apache2 start
+
