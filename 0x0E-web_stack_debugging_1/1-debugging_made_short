@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
-# Installing new server to serve content
-./0-nginx_likes_port_80
-echo "hi" > /var/run/nginx.pid
-echo "hi" > /run/nginx.pid
+# Configures an Nginx server to listen on port 80 .
 
+# create a symbolic link (-s option) between the Nginx configuration file
+# and the enabled sites directory
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+#restart nginx
+service nginx start
+# terminate the first nginx process ID
+kill "$(pgrep 'nginx' | head -1)"
